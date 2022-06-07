@@ -6,21 +6,21 @@ namespace Q10
     {
         static void Main(string[] args)
         {
-            Writer writer = new Writer();
+            var worker = new Worker();
 
-            ((IWriter)writer).Write();
+            ((IWorker)worker).Build();
 
             Console.ReadKey();
         }
     }
-    public interface IWriter
+    public interface IWorker
     {
-        void Write();
+        public void Build();
     }
 
-    public class Writer : IWriter
+    public class Worker : IWorker
     {
-        void IWriter.Write()
+        void IWorker.Build()
         {
             
         }
