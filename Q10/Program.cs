@@ -10,36 +10,36 @@ namespace Q10
         }
     }
 
-    public interface IWriter
+    public interface ICreatable
     {
-        void Write();
+        void Create();
     }
 
-    public interface IReader
+    public interface IDeletable
     {
-        void Read();
+        void Delete();
     }
 
-    public interface IMailer
+    public interface IUpdatable
     {
-        void SendEmail();
+        void Update();
     }
 
-    public class FileManager : IMailer, IReader, IWriter
+    public class FileManager : ICreatable, IDeletable, IUpdatable
     {
-        void IReader.Read()
+        public void Create()
         {
-            
+            throw new NotImplementedException();
         }
 
-        void IMailer.SendEmail()
+        public void Delete()
         {
-            
+            throw new NotImplementedException();
         }
 
-        void IWriter.Write()
+        public void Update()
         {
-            
+            throw new NotImplementedException();
         }
     }
 
